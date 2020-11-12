@@ -86,4 +86,6 @@ Los _opcodes_ y códigos de función de las instrucciones pueden encontrarse por
 
 1. `ori $v0, $zero, 4` reemplaza a `li $v0, 4` que es una pseudoinstrucción. En las instrucciones de tipo I el registro de destino es `rt` en vez de `rd`. Los campos que no se usan dicen "NA" por "no aplica".
 2. "lui $4, 4097 [hello]" reemplaza a "12: la $a0" que es una pseudoinstrucción. También es de tipo I asi que comparte sus características
+3. El syscall es una instrucción de tipo R y aplica a todos los campos menos imm.
+El resto de instrucciones son también del tipo I o R por lo que comparte las mismas características que las anteriores que sean de su mismo tipo.
 
